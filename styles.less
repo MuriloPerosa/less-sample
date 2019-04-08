@@ -1,0 +1,102 @@
+// Váriaveis Globais
+@background-color: #f4f4f4;
+@font-family: Tahoma;
+@primary-color: #5b5998;
+@secondary-color: #20B2AA;
+@line-height: 1em + 1em;
+
+
+body{
+    font-family: @font-family;
+    background: @background-color;
+    line-height: @line-height;
+}
+
+h1, h3{
+   .bordered 
+}
+
+.primary-text{
+    color: @primary-color;
+}
+
+.btn{
+    padding: 10px 15px;
+    border: 0;
+    .border-radius(10px);
+}
+
+//Nested Elements   
+ul#menu{
+    list-style: none;
+
+    //Functions of Less -> http://lesscss.org/functions/
+    background-color: lighten(@secondary-color, 50%);
+    // background-color: darken(@secondary-color, 50%);
+
+    li{
+        padding: 10px 0;
+        a{
+            color: @secondary-color;
+            text-decoration: none;
+
+            //Eventos
+            &:hover{
+                color: #000;
+            }
+        }
+    }
+}
+
+.square {
+
+    //Váriaveis Locais
+    @primary-color: #f4b541;
+    @secondary-color: #e542f4;
+
+    background-color: @secondary-color;
+
+    padding: 50px;
+    padding: 50px;
+
+    &:hover{
+        background-color: @primary-color;
+    }
+
+    @media (min-width: 768px) {
+      width: 100px;
+      height: 100px;
+    }
+    @media (min-width: 1280px) {
+      width: 200px;
+      height: 200px;
+    }
+  }
+  
+
+//Extendendo classe existente
+.primary-btn:extend(.btn){
+    background: @primary-color;
+    color: #fff;
+    .text-color(@primary-color);
+}
+
+//Mixins = Functions
+.border-radius(@radius){
+    border-radius: @radius;
+}
+
+.bordered{
+    border-top: dotted 1px #000;
+  
+    border-bottom: solid 2px #000;
+}
+//Text Color Mixin
+.text-color(@a) when (lightness(@a) >= 50%){
+    color: #000;
+}
+
+.text-color(@a) when (lightness(@a) < 50%){
+    color: #fff;
+}
+

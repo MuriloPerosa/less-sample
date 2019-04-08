@@ -1,0 +1,60 @@
+body {
+  font-family: Tahoma;
+  background: #f4f4f4;
+  line-height: 2em;
+}
+h1,
+h3 {
+  border-top: dotted 1px #000;
+  border-bottom: solid 2px #000;
+}
+.primary-text {
+  color: #5b5998;
+}
+.btn,
+.primary-btn {
+  padding: 10px 15px;
+  border: 0;
+  border-radius: 10px;
+}
+ul#menu {
+  list-style: none;
+  background-color: #d9f8f6;
+}
+ul#menu li {
+  padding: 10px 0;
+}
+ul#menu li a {
+  color: #20B2AA;
+  text-decoration: none;
+}
+ul#menu li a:hover {
+  color: #000;
+}
+.square {
+  background-color: #e542f4;
+  padding: 50px;
+}
+.square:hover {
+  background-color: #f4b541;
+}
+@media (min-width: 768px) {
+  .square {
+    width: 100px;
+    height: 100px;
+  }
+}
+@media (min-width: 1280px) {
+  .square {
+    width: 200px;
+    height: 200px;
+  }
+}
+.primary-btn {
+  background: #5b5998;
+  color: #fff;
+}
+.bordered {
+  border-top: dotted 1px #000;
+  border-bottom: solid 2px #000;
+}
